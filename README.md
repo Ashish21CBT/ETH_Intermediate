@@ -1,63 +1,58 @@
-## Personal Token Smart Contract
+# IGT Token (Example)
 
-The Personal Token Smart Contract is a basic Ethereum-based smart contract that implements a simple token with minting and burning functionalities. This contract allows the creation and destruction of tokens associated with a specific account.
+IGT Token is a simple ERC-20 compatible token contract implemented in Solidity. It allows users to mint and burn tokens, and provides basic information about the token.
 
 ## Table of Contents
 
-Overview
-
-Prerequisites
-
-Installation
-
-Usage
-
-Functions
-
-License
+- [Overview](#overview)
+- [Contract Details](#contract-details)
+- [Getting Started](#getting-started)
+- [Functions](#functions)
+- [License](#license)
 
 ## Overview
 
-This Solidity smart contract defines a basic token called "Ashish" with the symbol "Ash". It allows the minting and burning of tokens associated with specific Ethereum addresses. The contract uses the SafeMath library from the OpenZeppelin library to prevent integer overflow and underflow vulnerabilities in arithmetic operations.
+IGT Token (Example) is a basic Ethereum token contract that demonstrates the concept of minting and burning tokens. The contract provides essential functions to manage the token's total supply and individual balances.
 
-## Prerequisites
+## Contract Details
 
-Ethereum Development Environment (e.g., Remix, Truffle, Hardhat)
-OpenZeppelin library
+- **Token Name:** Ashish Token
+- **Token Abbreviation:** Ash
+- **Total Supply:** 0
 
-## Installation
+The contract uses the Solidity version 0.8.18 and is licensed under the MIT License.
 
-Clone the repository or create a new Solidity file and paste the code from the provided PersonalToken.sol into it.
+## Getting Started
 
-Import the SafeMath library from the OpenZeppelin contracts. You can install the library using npm or yarn:
+To get started with using the IGT Token contract, you can follow these steps:
 
-bash
-Copy code
-npm install @openzeppelin/contracts
-Compile and deploy the contract using your preferred Ethereum development environment.
-
-## Usage
-
-Deploy the contract to an Ethereum network or local blockchain.
-
-Interact with the contract using Ethereum wallets or DApp interfaces.
+1. Deploy the contract to the Ethereum network using a development environment like Remix or Truffle.
+2. Interact with the contract using Ethereum wallets or applications that support ERC-20 tokens.
 
 ## Functions
 
-mint(address account, uint256 value)
-This function allows the contract owner to mint new tokens and assign them to a specified account.
+The contract provides the following functions:
 
-account: The Ethereum address to which the minted tokens will be assigned.
-value: The amount of tokens to mint and assign.
-burn(address account, uint256 value)
-This function allows the contract owner to burn (destroy) tokens associated with a specified account.
+### `mint(address sender, uint value)`
 
-account: The Ethereum address from which tokens will be burned.
-value: The amount of tokens to burn.
+Mints new tokens and increases the total supply. This function is used to add tokens to the balance of a specified address.
+
+Parameters:
+- `sender`: The address to which the tokens will be minted.
+- `value`: The amount of tokens to mint.
+
+### `burn(address sender, uint value)`
+
+Burns tokens and decreases the total supply. This function is used to remove tokens from the balance of a specified address.
+
+Parameters:
+- `sender`: The address from which the tokens will be burned.
+- `value`: The amount of tokens to burn.
 
 ## Author
-ASHISH RAI
+
+Ashish Rai
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details
+This contract is licensed under the MIT License. You can find the full text of the license in the [LICENSE](LICENSE) file.
